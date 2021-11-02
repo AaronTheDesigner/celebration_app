@@ -16,7 +16,7 @@ const members = [
         points: 0,
     },
     {
-        id: "1",
+        id: "4",
         name: "Lisa",
         points: 0,
     },

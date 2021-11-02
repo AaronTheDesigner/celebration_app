@@ -21,7 +21,7 @@ const MobileNav = () => {
                     <MenuIcon className="h-10 w-10 cursor-pointer" onClick={() => toggleMenu()}/>
                 </div>
             </nav>
-            <div className={menu ? "-translate-x-0 transition duration-500 ease-in-out" : "-translate-x-full transition duration-500 ease-in-out opacity-0"}>
+            <div className={menu ? "-translate-x-0 transition duration-500 ease-in-out" : "-translate-x-full transition z-0 w-0 duration-500 ease-in-out opacity-0"}>
                 <MobileMenu className="" select={() => toggleMenu()} />
             </div>        
         </div>

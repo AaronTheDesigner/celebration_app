@@ -7,6 +7,7 @@ const MemberList = () => {
     const [deed, setDeed] = useState(celebrations[0].quantity)
     const [feat, setFeat] = useState(celebrations[1].quantity)
     const [triumph, setTriumph] = useState(celebrations[2].quantity)
+    const [points, setPoints] = useState(members[0].points)
 
     const LoopCelebrations = () => {
         return celebrations.map(cel => {
@@ -23,19 +24,81 @@ const MemberList = () => {
         })
     }
 
+    const giveDeed = () => {
+        let count = deed;
+        let press = count -1
+        setDeed(press)
+
+    }
+
+    const giveFeat = () => {
+        let count = feat;
+        let press = count -1
+        setFeat(press)
+    }
+
+    const giveTriumph = () => {
+        let count = triumph;
+        let press = count -1
+        setTriumph(press)
+    }
+
+
     const LoopMembers = () => {
         return members.map(member => {
             return (
-                <div className="my-1 flex flex-col bg-blue-100 p-2 rounded-lg shadow-lg">
-                    {member.name}
+                <div key={member.id} className="my-1 text-center flex flex-col bg-blue-100 p-2 rounded-lg shadow-lg">
+                    <h1 className="font-extrabold text-3xl my-3">
+                        {member.name}
+                    </h1>
+                    <div className="bg-green-900 text-white rounded-lg flex my-2 flex-col">
+                        Celebrate Them
+                        <div className="flex justify-center gap-2">
+                        <button className="bg-white text-black uppercase m-2 p-1 rounded-md" onClick={giveDeed}>
+                            deed
+                        </button>
+                        <button className="bg-white text-black uppercase m-2 p-1 rounded-md" onClick={giveFeat}>
+                            feat
+                        </button>
+                        <button className="bg-white text-black uppercase m-2 p-1 rounded-md" onClick={giveTriumph}>
+                            triumph
+                        </button>
+                        </div>
+                    </div>    
+
                 </div>
             )
         })
     }
 
+    const RenderCelebrations = () => {
+        return (
+            <div className="bg-green-900 p-2 text-white shadow-lg rounded-lg flex my-2 flex-col">
+                <h1 className="text-2xl text-center">
+                    Celebrate Others
+                </h1>
+                <p>Start Recieveing by Celebrating...</p>
+                <ul className="font-extrabold">
+                    <li className="text-blue-500 bg-gray-200 p-2 text-center rounded-md m-1">{deed} Deeds This Week</li>
+                    <li className="text-yellow-500 bg-gray-200 p-2 text-center rounded-md m-1">{feat} Feats This Month</li>
+                    <li className="text-purple-500 bg-gray-200 p-2 text-center rounded-md m-1">{triumph} Triumph This Celebration</li>
+                </ul>
+
+            </div>
+        )
+    }
+
+    const renderOther = () => {
+        return (
+            <div className="bg-gray-400">
+
+            </div>
+        )
+    }
+
 
     return (
-        <div className="m-3">
+        <div className="Z-10 m-3">
             <div className="rounded-lg shadow-lg flex flex-col px-3 py-3 bg-blue-100">
                 {LoopCelebrations()}
             </div>
@@ -45,9 +108,10 @@ const MemberList = () => {
             <h1 className="text-2xl underline">
                 Your Colleagues
             </h1>
+            {RenderCelebrations()}
             <div className="my-1 flex flex-col bg-white p-2 rounded-lg shadow-lg">
                 {LoopMembers()}
-            </div>        
+            </div>       
         </div>
     )
 }
