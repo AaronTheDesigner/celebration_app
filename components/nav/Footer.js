@@ -3,14 +3,14 @@ import Link from 'next/link';
 
 const Footer = () => {
     return (
-        <footer className="flex flex-col bg-green-900 text-green-50">
+        <footer className="bottom-0 flex flex-col bg-green-900 text-green-50">
             <div className="mx-56 my-12 flex flex-col gap-9 items-center lg:flex-row font-extralight justify-evenly">
                 {/* logo */}
                 <div className="text-md" >
                     <Link href="/">CELEBRATION</Link>
                 </div>
                 {/* menu */}
-                <div className="list-none flex flex-col lg:flex-row justify-center items-center gap-3 text-s">
+                <div className="list-none flex lg:flex-row justify-center items-center gap-3 text-s">
                     <div className="inline-block relative">
                         <li className="relative">
                             <Link href="/dashboard" className="inline-block h-full w-full">Dashboard</Link>
