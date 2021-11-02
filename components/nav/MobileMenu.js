@@ -9,7 +9,7 @@ const MobileMenu = (props) => {
         <div className="flex z-50 flex-col bg-green-900 text-green-50 h-screen items-center justify-center gap-y-8" role="mobile menu" >
             {/* logo */}
             <div className="text-3xl" >
-                <a href="/">CELEBRATION</a>
+                <Link href="/">CELEBRATION</Link>
             </div>
             {/* menu */}
             <div className="list-none flex flex-col justify-center items-center gap-y-5 text-2xl pb-3">

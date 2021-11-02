@@ -51,8 +51,8 @@ const Footer = () => {
             </div>
             <div className="flex flex-col items-center opacity-50 text-xs md:mb-2 lg:mb-6">
                 <div className="flex gap-x-4 mb-2">
-                    <a href="#">Terms &amp; Conditions</a>
-                    <a href="#">Privacy Policy</a>
+                    <Link href="#">Terms &amp; Conditions</Link>
+                    <Link href="#">Privacy Policy</Link>
                 </div>
                 <div className="font-medium mb-1">© AT Upgrades 2021</div>
             </div>

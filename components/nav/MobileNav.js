@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MenuIcon } from '@heroicons/react/solid';
 import MobileMenu from './MobileMenu';
+import Link from 'next/link';
 
 const MobileNav = () => {
     const [menu, setMenu] = useState(false);
@@ -14,7 +15,7 @@ const MobileNav = () => {
             <nav className="filter drop-shadow-md px-8 py-3 flex flex-row items-center justify-between bg-green-900 text-green-50">
                 {/* logo */}
                 <div className="text-2xl" >
-                    <a href="#">CELEBRATE</a>
+                    <Link href="#">CELEBRATE</Link>
                 </div>
                 <div className="text-2xl" >
                     <MenuIcon className="h-10 w-10 cursor-pointer" onClick={() => toggleMenu()}/>
