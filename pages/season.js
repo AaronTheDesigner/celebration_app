@@ -4,7 +4,7 @@ import rewards from "../data/rewards";
 import members from "../data/members";
 
 const season = () => {
-    const [points, setPoints] = useState(1200)
+    const [points, setPoints] = useState(1200);
 
     const renderRewards = () => {
         return rewards.map(reward => {
@@ -29,10 +29,12 @@ const season = () => {
 
     return (
         <Layout>
-            <h1 className="font-extrabold text-2xl uppercase text-center my-3">
-                you have {points} points
-            </h1>
+            <div>
+                <h1 className="font-extrabold text-2xl uppercase text-center my-3">
+                    you have {points} points
+                </h1>
             {renderRewards()}
+            </div>            
         </Layout>
     )
 }
