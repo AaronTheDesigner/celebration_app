@@ -14,8 +14,8 @@ const celebrations = [
         quantity: 2
     },
     {
-        id: "20",
-        title: "deed",
+        id: "22",
+        title: "triumph",
         description: "Celebrate something a colleage has done over the course of C1/C2/C3/C4",
         points: 1000,
         quantity: 1

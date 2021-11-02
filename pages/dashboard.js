@@ -1,9 +1,12 @@
-import Layout from "../components/Layout"
+import Layout from "../components/Layout";
+import Member from "../components/Member";
+import MemberList from "../components/MemberList";
 
 const dashboard = () => {
     return (
         <Layout>
-            dashboard
+            <Member />
+            <MemberList />
         </Layout>
     )
 }
