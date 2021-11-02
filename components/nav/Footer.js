@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Footer = () => {
     return (
         <footer className="bottom-0 flex flex-col bg-green-900 text-green-50">
-            <div className="mx-56 my-12 flex flex-col gap-9 items-center lg:flex-row font-extralight justify-evenly">
+            <div className="my-12 flex flex-col gap-9 items-center lg:flex-row font-extralight justify-evenly">
                 {/* logo */}
                 <div className="text-md" >
                     <Link href="/">CELEBRATION</Link>
